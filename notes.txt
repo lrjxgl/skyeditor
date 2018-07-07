@@ -1,0 +1,12 @@
+配置说明：
+skyeditor.root = "http://" + document.domain + "/plugin/skyeditor/";
+skyeditor.uploadUrl = "/shop.php?m=upload&a=uploadTao";
+skyeditor.uploadVideo="/shop.php?m=upload&a=UploadVideo";
+
+//文件 视频上传 返回json格式
+
+{
+	"error":0,
+	"imgurl":"attach\/2018\/07\/07\/ae759e89ad6dd18e6d259b432543866c.png",
+	"trueimgurl":"http:\/\/deitui-weizhan1.oss-cn-hangzhou.aliyuncs.com\/attach\/2018\/07\/07\/ae759e89ad6dd18e6d259b432543866c.png"
+}

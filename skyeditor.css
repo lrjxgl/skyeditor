@@ -1,0 +1,120 @@
+	.sky-editor{
+		position: fixed;
+		bottom: 0px;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		
+	}
+	*{
+		box-sizing: border-box;
+	}
+	.sky-editor-content {
+		resize:vertical;
+		overflow:auto;
+		border:1px solid #eee;
+		border-radius:5px;
+		min-height:100px;
+	   -webkit-user-select:text;
+	   height: 260px; 
+	   width: 100%;
+	   box-sizing: border-box;
+	   background-color: #fff;
+	   padding: 5px;
+               
+  }
+  .sky-editor-content h3{
+	  font-size: 16px;
+	  color: #333;
+  }
+  .sky-editor-content img{
+	  max-width: 100%;
+}
+.sky-editor-content>div{
+	margin-bottom: 3px;
+	border:1px solid #eae4da;
+	-webkit-user-select:text;
+}
+.sky-editor-content div{
+	-webkit-user-select:text;
+}
+	.sky-editor-tools{
+		display: flex;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+	}
+	.sky-editor-tools-item{
+	
+		cursor: pointer;
+		flex: 1;
+		color: #555;
+	}
+	.sky-editor-tools-item.active{
+		color: #0000FF;
+	}
+	.sky-editor-colors{
+		padding: 10px;
+		display: none;
+		text-align: center;
+	}
+	.sky-editor-colors div{
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		margin-right: 6px;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	.sky-editor-color{
+			    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #8f8f94;
+    position: relative;
+    top: 2px;
+	}
+	.sky-editor-color-a{
+		background-color: #1ebdc0;
+	}
+	.sky-editor-color-b{
+		background-color: #f8375b;
+	}
+	.sky-editor-color-c{
+		background-color: #fd8f43;
+	}
+	.sky-editor-color-d{
+		background-color: #a4ce3b;
+	}
+	.sky-editor-color-e{
+		background-color: #35dab6;
+	}
+	.sky-editor-color-f{
+		background-color: #199de1;
+	}
+	.sky-editor-color-g{
+		background-color: #9581f3;
+	}
+	.sky-editor-color-h{
+		background-color: #333;
+	}
+	.sky-editor-color-i{
+		background-color: #8f8f94;
+	}
+	.sky-editor-emojis{
+		padding: 5px;
+		max-height: 300px;
+		overflow: auto;
+		display: none;
+	}
+	.sky-editor-emoji{
+    background: transparent url(images/jxface2.gif?v=1.1) no-repeat scroll left top;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+		margin: 3px;
+		border: 1px solid #eee;
+	}
