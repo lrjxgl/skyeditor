@@ -54,7 +54,8 @@
 		border-radius:5px;
 		min-height:100px;
 	   -webkit-user-select:text;
-	   height: 260px; 
+	   height: 260px;
+	   line-height: 2; 
 	   width: 100%;
 	   box-sizing: border-box;
 	   background-color: #fff;
