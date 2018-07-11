@@ -70,8 +70,8 @@
 	  max-width: 100%;
 }
 .sky-editor-content>div{
-	margin-bottom: 3px;
-	border:1px solid #eae4da;
+	margin-bottom: 5px;
+	border-bottom:1px solid #eae4da;
 	-webkit-user-select:text;
 }
 .sky-editor-content div{

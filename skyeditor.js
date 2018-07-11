@@ -1,7 +1,7 @@
 
 var skyeditor = {};
 skyeditor.isfirst=true;
-skyeditor.root = "http://" + document.domain + "/plugin/skyeditor/";
+skyeditor.root = document.domain?"http://" + document.domain + "/plugin/skyeditor/":"";
 skyeditor.uploadUrl = "/shop.php?m=upload&a=base64";
 skyeditor.uploadVideo = "/shop.php?m=upload&a=UploadVideo";
 skyeditor.colors=['#1ebdc0','#f8375b','#fd8f43','#a4ce3b','#35dab6','#199de1','#9581f3','#333','#8f8f94'];
