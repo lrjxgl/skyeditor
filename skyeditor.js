@@ -5,7 +5,8 @@ skyeditor.root = document.domain?"http://" + document.domain + "/plugin/skyedito
 skyeditor.uploadUrl = "/shop.php?m=upload&a=base64";
 skyeditor.uploadVideo = "/shop.php?m=upload&a=UploadVideo";
 skyeditor.colors=['#1ebdc0','#f8375b','#fd8f43','#a4ce3b','#35dab6','#199de1','#9581f3','#333','#8f8f94'];
-skyeditor.html='<div style="height: 50px;"></div><div class="sky-editor-loading">上传中...</div><div class="sky-editor">	<div class="sky-editor-colors">			</div>	<div class="sky-editor-emojis">			</div>	<div class="sky-editor-tools">		</div>	<input type="file" id="sky-editor-file" name="upimg" multiple="multiple" style="display: none;" />	<input type="file" id="sky-editor-file-video" name="upimg" style="display: none;" /></div>';
+skyeditor.$toolsItem=new Map();
+skyeditor.html='<div style="height: 50px;"></div><div class="sky-editor-loading">上传中...</div><div class="sky-editor">	<div class="sky-editor-colors">			</div>	<div class="sky-editor-emojis">			</div>	<div class="sky-editor-tools">		</div>	<input type="file" id="sky-editor-file" name="upimg" multiple="multiple" style="display: none;" />	<input type="file" id="sky-editor-file-video" name="upimg" style="display: none;" /></div><div class="sky-editor-el-before"><i class="skyeditor-iconfont skyeditor-icon-el-before"></i> </div><div class=" sky-editor-el-after"><i class="skyeditor-iconfont skyeditor-icon-el-after"></i></div>';
 skyeditor.skyUpload = function (upid, url, success, error, uploadProgress) {
     var vFD = new FormData();
     var f = document.getElementById(upid).files;
@@ -24,15 +25,21 @@ skyeditor.skyUpload = function (upid, url, success, error, uploadProgress) {
 
     }
 }
+skyeditor.loadCss=function($css){
+	$("<link>")
+	.attr({
+		rel: "stylesheet",
+		type: "text/css",
+		href: skyeditor.root + $css
+	}).appendTo("head");
+}
 skyeditor.init = function () {
    	if(skyeditor.isfirst){ 
-    	$("<link>")
-        .attr({
-            rel: "stylesheet",
-            type: "text/css",
-            href: skyeditor.root + "skyeditor.css"
-        }).appendTo("head");
-		$("body").append(skyeditor.html);
+		skyeditor.loadCss("skyeditor.css");
+		if($(".sky-editor").length==0){
+			$("body").append(skyeditor.html);
+		}
+		
 		skyeditor.isfirst=false;
 	} 
     skyeditor.skyEmojis();   
@@ -76,6 +83,9 @@ skyeditor.setTools=function(){
 				break;
 			case "center":
 				html=html+'<div class="sky-editor-tools-item sky-editor-excute" data-role="center"><i class="skyeditor-iconfont skyeditor-icon-centor"></i></div>';
+				break;
+			default:
+				html=html+skyeditor.$toolsItem.get(skyeditor.tools[i]);
 				break;
 		}
 	}
@@ -233,8 +243,15 @@ $(function () {
                 skyeditor.skyEl.css("color", color);
                 $(".sky-editor-colors").hide();
                 break;
-
+			 
         }
 
     })
+	
+	$(document).on("click",".sky-editor-el-after",function(){
+		skyeditor.skyEl.after('<div style="color:#555;">&nbsp;</div>');
+	})
+	$(document).on("click",".sky-editor-el-before",function(){
+		skyeditor.skyEl.before('<div style="color:#555;">&nbsp;</div>');
+	})
 });

@@ -6,4 +6,25 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://www.deitui.com/plugin/lrz/lrz.bundle.js"></script>
 <script src="skyeditor.js"></script>
+<div style="height: 50px;"></div>
+<div class="sky-editor-loading">上传中...</div>
+<div class="sky-editor">
+    <div class="sky-editor-colors"> </div>
+    <div class="sky-editor-emojis"> </div>
+    <div class="sky-editor-tools"> </div>
+    <input type="file" id="sky-editor-file" name="upimg" multiple="multiple" style="display: none;" />
+    <input type="file" id="sky-editor-file-video" name="upimg" style="display: none;" />
+		
+</div>
+<div class="sky-editor-el-before">
+		    <i class="skyeditor-iconfont skyeditor-icon-el-before"></i>
+		</div>
+		<div class=" sky-editor-el-after">
+		    <i class="skyeditor-iconfont skyeditor-icon-el-after"></i>
+		</div>
+<script src="code/code.js"></script>		
+<script>
+    skyeditor.tools = ["h3", "pic", "color", "B", "video", "emoji", "center", "code"];
+    skyeditor.init();
+</script>
  

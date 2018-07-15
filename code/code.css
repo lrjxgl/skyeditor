@@ -1,0 +1,37 @@
+.sky-editor-code{
+		border-left:2px solid #0066CC;
+		padding-left: 5px;
+		padding: 10px 5px;
+		line-height: 2;
+		
+	}
+	.sky-editor-code-bg{
+		position: fixed;
+		top: 0;
+		bottom: 40px;
+		left:0px;
+		right: 0px;
+		background-color: #eee;
+		opacity: 0.6;
+		z-index: 9;
+		display: none;
+	}
+	
+	.sky-editor-code-box{
+		position: fixed;
+		bottom: 100px;
+		left:0px;
+		right: 0px;
+		background-color: #fff;
+		z-index: 999;
+		display: none;
+		padding: 10px;
+	}
+	.sky-editor-code-content{
+		height: 100px;
+		width: 100%;
+		margin-bottom: 10px;
+		border:1px solid #ddd;
+		border-radius: 5px;
+		padding: 5px;
+	}

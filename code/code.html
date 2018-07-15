@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+
+<div style="margin-bottom:10px">skyEditor-手机端编辑器 </div>
+<div class="sky-editor-content" contenteditable="true"></div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://www.deitui.com/plugin/lrz/lrz.bundle.js"></script>
+<script src="../skyeditor.js"></script>
+<script>
+	skyeditor.root="../";
+	skyeditor.tools.push("code");
+	skyeditor.init();
+</script>
+
+<div class="sky-editor-code-bg"></div>
+<div class="sky-editor-code-box">
+	<textarea class="sky-editor-code-content"></textarea>
+	<div class="sky-editor-btns">
+		<div class="sky-editor-btn sky-editor-code-excute" >插入代码</div>
+		
+	</div>
+</div>
+<?php
+$a=1;
+echo $a+1;
+?>
+<script src="code.js"></script> 
